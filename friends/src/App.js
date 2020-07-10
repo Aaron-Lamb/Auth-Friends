@@ -1,4 +1,5 @@
 import React from 'react';
+import Login from './components/Login';
 import {BrowserRouter as Router, Route, Link} from 'react-router-dom';
 import './App.css';
 
@@ -7,7 +8,7 @@ function App() {
     <Router>
       <div className="App">
         <header className='App-header'>
-          <Link to='/login' />
+          <Link to='/login' className='App-Link'>Login</Link>
           <Route path='/login' component={Login} />
         </header>
       </div>
