@@ -22,17 +22,11 @@ import axios from 'axios';
          event.preventDefault();
          axios.post('http://localhost:5000/api/login', this.state.credentials)
          .then(response => {
-             console.log(response)
-             localStorage.setItem('token', response.data.payload)
-             this.props.history.push('/friends')
+             console.log(response);
+             localStorage.setItem('token', response.data.payload);
+             this.props.history.push('/friends');
          })
          .catch(error => console.log(error))
-         this.setState({
-             credentials: {
-                 username: '',
-                 password: ''
-             }
-         })
      }
     render() {
         return(
