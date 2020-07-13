@@ -36,6 +36,11 @@ import axios from 'axios';
                 <label htmlFor='password'>Password: </label>
                 <input name='password' id='password' type='password' value={this.state.credentials.password} onChange={this.handleChanges}/>
                 <button type='submit'>Log in</button>
+                {this.props.isLoading && (
+                    <div>
+                        <p>Loading</p>
+                    </div>
+                )}
             </form>
         )
     }
